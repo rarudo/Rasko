@@ -2,6 +2,7 @@
 
 #LANG=ja_JP.utf8
 
+# Copied from https://www.erestage.com/develop/raspberry-pi-radiko/
 pid=$$
 date=`date '+%Y-%m-%d-%H_%M'`
 playerurl=http://radiko.jp/apps/js/flash/myplayer-release.swf
@@ -130,7 +131,7 @@ rm -f ${channel}.xml
 echo ${url_parts[0]}
 echo ${url_parts[1]}
 echo ${url_parts[2]}
-echo $playerurl 
+echo $playerurl
 echo $authtoken
 
 
@@ -145,4 +146,3 @@ rtmpdump -v \
 if [ $? = 0 ]; then
   rm -f "/tmp/${channel}_${date}"
 fi
-
