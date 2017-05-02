@@ -2,7 +2,10 @@
 
 #LANG=ja_JP.utf8
 
+
 # Copied from https://www.erestage.com/develop/raspberry-pi-radiko/
+
+
 pid=$$
 date=`date '+%Y-%m-%d-%H_%M'`
 playerurl=http://radiko.jp/apps/js/flash/myplayer-release.swf
@@ -10,7 +13,18 @@ playerfile="/tmp/player.swf"
 keyfile="/tmp/authkey.png"
 
 outdir="."
+WAIT=0
 
+while getopts w: OPT
+do
+    case $OPT in
+        "w")  WAIT=$OPTARG
+            ;;
+    esac
+done
+
+echo "Wait for $WAIT seconds"
+sleep "$WAIT""s"
 
 if [ $# -le 0 ]; then
   echo "usage : $0 channel_name duration(minuites) [outputdir] [prefix]"
