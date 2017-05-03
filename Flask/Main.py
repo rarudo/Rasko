@@ -21,7 +21,7 @@ def picked_up():
 # index にアクセスしたときの処理
 @app.route('/')
 def index():
-    title = "ようこそ"
+    title = "Rasko Control"
     message = picked_up()
     # index.html をレンダリングする
     return render_template('index.html',
