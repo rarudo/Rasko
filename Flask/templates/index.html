@@ -2,24 +2,54 @@
 {% block content %}
   <!-- Form
   ================================================== -->
-<div class="form">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <p class="lead">
-          {% if name %}
-            こんにちは {{ name }} さん
-          {% else %}
-            {{ message }}
-          {% endif %}
-        </p>
-        <form action="/post" method="post" class="form-inline">
-          <label for="name">名前</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-          <button type="submit" class="btn btn-default">送信する</button>
-        </form>
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-4">Rasko Controller</h1>
+        </div>
       </div>
     </div>
   </div>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TBS</td>
+            <td><a href="#" class="btn btn-primary">再生</a></td>
+            <td><a href="#" class="btn btn-outline-primary">停止</a></td>
+            <td><a href="#" class="btn btn-success">目覚まし</a></td>
+          </tr>
+          <tr>
+            <td>J-WAVE</td>
+            <td><a href="#" class="btn btn-primary">再生</a></td>
+            <td><a href="#" class="btn btn-outline-primary">停止</a></td>
+            <td><a href="#" class="btn btn-success">目覚まし</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="#" class="btn btn-primary">再生</a></td>
+            <td><a href="#" class="btn btn-outline-primary">停止</a></td>
+            <td><a href="#" class="btn btn-success">目覚まし</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
+
 {% endblock %}
